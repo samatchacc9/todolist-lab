@@ -7,12 +7,6 @@
 import { useState } from "react";
 
 function App() {
-  const [show, setShow] = useState(true);
-
-  const clickHide = e => {
-    setShow;
-  };
-  return <button onClick={clickHide}>Click to hide me</button>;
+  return <div></div>;
 }
-
 export default App;
