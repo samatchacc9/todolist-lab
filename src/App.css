@@ -1,4 +1,8 @@
 /* import "./Menu.css"; */
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -41,4 +45,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.borderColorWrong {
+  border: 1px red solid;
+}
+.borderColorCorrect {
+  border: 1px green solid;
+}
+.colorTextWrong {
+  color: red;
+}
+.colorTextCorrect {
+  color: green;
+}
+
+.hidden {
+  display: none;
 }
