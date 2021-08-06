@@ -25,7 +25,7 @@ function AddTodoForm(props) {
   };
 
   return (
-    <>
+    <div style={{ marginTop: "1rem" }}>
       <input
         type="text"
         placeholder="Enter new todo"
@@ -38,7 +38,7 @@ function AddTodoForm(props) {
           {error}
         </p>
       )}
-    </>
+    </div>
   );
 }
 
