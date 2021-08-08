@@ -1,0 +1,10 @@
+li {
+  display: flex;
+  justify-content: space-between;
+}
+span {
+  margin-right: 1rem;
+}
+button {
+  margin-right: 1rem;
+}

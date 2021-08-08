@@ -1,31 +1,26 @@
+import "./AddTodoForm.css";
 import { useState } from "react";
 
 function AddTodoForm(props) {
+  // sate ก้อนข้อมูล
   const [newTodo, setNewTodo] = useState("");
-  const [error, setError] = useState("");
+  //   //state = ช่อง input
+  //   const []
 
   const handleChangeNewTodo = e => {
+    //เข้าถึงค่า value ในช่อง input
     const value = e.target.value;
-    if (value === "") {
-      setError("Todo is require");
-    } else {
-      setError("");
-    }
+
     setNewTodo(value);
   };
-
   const handleClickAdd = () => {
-    if (newTodo === "") {
-      setError("Todo is required");
-    } else {
-      setError("");
+    if (newTodo !== "") {
       props.addTodo(newTodo);
       setNewTodo("");
     }
   };
-
   return (
-    <div style={{ marginTop: "1rem" }}>
+    <div className="add">
       <input
         type="text"
         placeholder="Enter new todo"
@@ -33,13 +28,7 @@ function AddTodoForm(props) {
         onChange={handleChangeNewTodo}
       />
       <button onClick={handleClickAdd}>Add</button>
-      {error && (
-        <p style={{ fontSize: "0.75rem", margin: 0, padding: 0, color: "red" }}>
-          {error}
-        </p>
-      )}
     </div>
   );
 }
-
 export default AddTodoForm;
