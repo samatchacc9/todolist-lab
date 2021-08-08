@@ -5,14 +5,18 @@ import AddTodoForm from "./components/AddTodoForm";
 import Todo from "./components/Todo";
 import EditTodoForm from "./components/EditTodoForm";
 import SearchForm from "./components/SearchForm";
+import "./App.css";
 
 function App() {
+  //data
   const [todos, setTodos] = useState([
     { id: uuidv4(), name: "Travel" },
     { id: uuidv4(), name: "Shopping" },
     { id: uuidv4(), name: "Watching a movie" },
     { id: uuidv4(), name: "Travel" },
   ]);
+
+  //state
   const [isEditting, setIsEditing] = useState(false);
   const [edittingItem, setEdittingItem] = useState({});
   const [filteredText, setFilteredText] = useState("");
@@ -72,8 +76,9 @@ function App() {
   };
 
   return (
-    <>
-      <SearchForm searchTodo={searchTodo} clearSearch={clearSearch} />
+    <div className="container">
+      {/* <SearchForm searchTodo={searchTodo} clearSearch={clearSearch} /> */}
+
       {/* <AddTodoForm addTodo={addTodo} />
       {isEditting && <EditTodoForm cancelEditForm={cancelEditForm} edittingItem={edittingItem} />} */}
 
@@ -104,7 +109,7 @@ function App() {
           />
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
