@@ -61,6 +61,7 @@ function App() {
 
   //===2=== ใช้ระบุ id เมื่อมีการกดปุ่มจากหน้า Todo.js
   const pressEdit = id => {
+    console.log(id);
     //เมื่อมีการกดปุ่ม edit ให้ทำการเปิด edit form เอาฟังก์ชัน set state ไปรับค่าแล้ว return กับไปยัง current state
     setIsEditing(true);
     //ระบุตำแหน่ง id เมื่อมีการกด และสร้างตัวแปรมารับตำแหน่ง
@@ -90,6 +91,7 @@ function App() {
             todo={item}
             deleteTodo={deleteTodo}
             pressEdit={pressEdit}
+            // editingItem={editingItem}
           />
         ))}
       </ul>

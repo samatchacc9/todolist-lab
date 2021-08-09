@@ -1,6 +1,7 @@
 import "./Todo.css";
 
 function Todo(props) {
+  // console.log(props.todo.id);
   return (
     <li>
       <span>{props.todo.name}</span>

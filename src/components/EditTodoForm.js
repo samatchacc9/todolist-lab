@@ -2,6 +2,7 @@ import "./EditTodoForm.css";
 import { useState } from "react";
 
 function EditTodoForm(props) {
+  // console.log(props.editingItem.name);
   // state ข้อความ
   const [todo, setTodo] = useState(props.editingItem.name);
   //state error
