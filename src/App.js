@@ -43,7 +43,7 @@ function App() {
 
   //========function Edit========//
 
-  //===1=== ใช้แก้ไขตำแหน่งข้อมูล
+  //===1=== save edit
 
   function editTodo(id, newName) {
     //ระบุตำแหน่งที่ต้องการแก้ไขด้วย id และสร้างตัวแปรไปเก็บ
@@ -64,10 +64,10 @@ function App() {
     //เมื่อมีการกดปุ่ม edit ให้ทำการเปิด edit form เอาฟังก์ชัน set state ไปรับค่าแล้ว return กับไปยัง current state
     setIsEditing(true);
     //ระบุตำแหน่ง id เมื่อมีการกด และสร้างตัวแปรมารับตำแหน่ง
-    const idTodo = todos.findIndex(item => item.id === id);
+    const idx = todos.findIndex(item => item.id === id);
 
     //เอา function set state มารับค่าตำแหน่ง id ที่มีการเปลี่ยนแปลง
-    setEditingItem(todos[idTodo]);
+    setEditingItem(todos[idx]);
   };
 
   //=== 3 === เมื่อกดปุ่ม cancel หน้า todo.js
@@ -78,7 +78,11 @@ function App() {
   return (
     <div>
       <AddTodoForm addTodo={addTodo} />
-      <EditTodoForm />
+      <EditTodoForm
+        editTodo={editTodo}
+        cancelEditForm={cancelEditForm}
+        editingItem={editingItem}
+      />
       <ul>
         {todos.map(item => (
           <Todo
