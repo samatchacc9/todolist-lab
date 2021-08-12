@@ -77,7 +77,7 @@ function App() {
 
   return (
     <div className="container">
-      {/* <SearchForm searchTodo={searchTodo} clearSearch={clearSearch} /> */}
+      <SearchForm searchTodo={searchTodo} clearSearch={clearSearch} />
 
       {/* <AddTodoForm addTodo={addTodo} />
       {isEditting && <EditTodoForm cancelEditForm={cancelEditForm} edittingItem={edittingItem} />} */}

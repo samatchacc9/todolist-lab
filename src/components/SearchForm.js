@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 function SearchForm(props) {
+  //state
   const [searchTerm, setSearchTerm] = useState("");
 
+  //click clear
   const handleClickClear = () => {
     setSearchTerm("");
     props.clearSearch();
